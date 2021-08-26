@@ -1,0 +1,47 @@
+---
+title: "Post Title"
+description: |
+  Post description
+author: 
+  - name: Duncan Gates
+    url: https://twitter.com/ellamkaye
+date: "`r Sys.Date()`"
+base_url: https://ellakaye.rbind.io/
+preview: IMAGE.png
+categories:
+  - TAG_1
+  - TAG_2
+twitter:
+  site: "@gates_duncan"
+  creator: "@gates_duncan"
+output:
+  distill::distill_article:
+    highlight: ek_syntax_highlighting.theme
+    self_contained: false
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = TRUE,
+  message = TRUE,
+  R.options = list(width = 60)
+)
+```
+
+```{r metathis, message=FALSE, warning=FALSE, include=FALSE}
+library(metathis)
+
+meta() %>%
+  meta_name("github-repo" = "dungates/duncangates-distill") %>%
+  meta_viewport() %>%
+  meta_social(
+    title = "TITLE", # adding title here removes "DUNCAN GATES: " from the front
+    image = "https://ellakaye.rbind.io/posts/FULL_PATH_TO_IMAGE.png", 
+    image_alt = "ALT TEXT FOR IMAGE",
+    og_type = "website",
+    og_author = c("Duncan Gates"),
+    twitter_card_type = "summary_large_image", # can also be summary
+  )
+```

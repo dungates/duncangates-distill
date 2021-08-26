@@ -1,0 +1,45 @@
+---
+title: "DUNCAN GATES"
+image: "images/duncan_profile.jpeg"
+favicon: images/favicon.png
+links:
+  - label: '<i class="fab fa-twitter"></i> Twitter'
+    url: "https://twitter.com/gates_duncan"
+  - label: '<i class="fab fa-github"></i> GitHub'
+    url: "https://github.com/dungates"
+  - label: '<i class="fab fa-linkedin"></i> LinkedIn'
+    url: "https://www.linkedin.com/in/duncan-gates/"
+  - label: '<i class="fas fa-envelope"></i> Email'
+    url: "mailto:duncanagates@gmail.com"
+twitter:
+  creator: "@gates_duncan"
+  site: "@duncangates"
+output:
+  postcards::jolla
+site: distill::distill_website
+---
+
+```{r setup, message=FALSE, warning=FALSE, include=FALSE}
+library(metathis)
+
+meta() %>%
+  meta_description(
+    "The personal website of Duncan Gates"
+  ) %>%
+  meta_name("github-repo" = "dungates/duncangates-distill") %>%
+  meta_viewport() %>%
+  meta_social(
+    title = "DUNCAN GATES",
+    url = "https://duncangates.me",
+    image = "images/logo-white-background.png",
+    image_alt = "A logo made from Duncan Gates's name - first name on top of last name in black capital letters, separated by a horizontal bright pink line",
+    og_type = "website",
+    og_author = c("Duncan Gates"),
+    twitter_card_type = "summary",
+    twitter_creator = "@gates_duncan"
+  )
+```
+
+Hello and welcome to my personal website! 
+
+I am a data scientist at Teaching Lab and an R enthusiast. 
